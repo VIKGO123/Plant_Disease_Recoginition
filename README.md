@@ -3,4 +3,4 @@
 ## CrowdAI dataset for plant disease recognition using leaves is used for this project
 ### Transfer Learning with Densenet121 is used with intial validation accuracy of 89%
 ### Link for Dataset of colour images of leaves
-[[https://drive.google.com/drive/folders/1RTsKvz9iYJ1bYCFxtBKbY1zSzrJXoroh?usp=sharing]]
+https://drive.google.com/drive/folders/1RTsKvz9iYJ1bYCFxtBKbY1zSzrJXoroh?usp=sharing
