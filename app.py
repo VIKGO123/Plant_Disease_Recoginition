@@ -14,7 +14,7 @@ from torch import nn
 
 app = Flask(__name__)
 
-def predict_breed_transfer(pil_image,model):
+def predict_transfer(pil_image,model):
     # load the image and return the predicted breed
     mean_train_set,std_train_set = [0.487,0.467,0.397],[0.235,0.23,0.23]
     
