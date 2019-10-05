@@ -96,7 +96,7 @@ def upload_file():
     
     
 #         disease = predict_transfer(pil_image,model)
-#         return jsonify ('This a disease picture of :{}'.format(disease))
+        return jsonify ('This a disease picture of ')
     
     
 	
