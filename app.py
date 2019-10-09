@@ -82,10 +82,10 @@ def render_about_page():
 
 @app.route('/uploadajax',methods=['GET', 'POST'])
 def upload_file():
-	file = request.files['myfile']
-    	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
-    	if file.filename.split('.')[1] not in image_extensions:
-        	return jsonify('Please upload an appropriate image file')
+# 	file = request.files['myfile']
+#     	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
+#     	if file.filename.split('.')[1] not in image_extensions:
+#         	return jsonify('Please upload an appropriate image file')
 # 	model = torch.load("Model/model_plant.pt")
 	
 # 	image_bytes = file.read()
