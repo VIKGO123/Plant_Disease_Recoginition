@@ -1,18 +1,18 @@
 
-import os
-
 from flask import Flask,request,jsonify,render_template
+import os
 import torch
 from torchvision import models,transforms
 import numpy as np
 from PIL import Image
 import io
+import face_recognition
 import cv2
+import face_recognition
 from torch import nn
 
 
 
-app = Flask(__name__,static_url_path='/static')
 
 def predict_transfer(pil_image,model):
     # load the image and return the predicted breed
@@ -70,22 +70,23 @@ def predict_transfer(pil_image,model):
     return class_name[class_idx]
 
 
+app = Flask(__name__, static_url_path='/static')
+
 @app.route('/')
 def home():
-
 	return render_template("index.html")
 
 
 @app.route('/about')
 def render_about_page():
-    return render_template('about.html')
+	return render_template('about.html')
 
 @app.route('/uploadajax',methods=['POST'])
 def upload_file():
 	file = request.files['file']
     	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
     	if file.filename.split('.')[1] not in image_extensions:
-        	return jsonify('Please upload an appropriate image file')
+		return jsonify('Please upload an appropriate image file')
 # 	model = torch.load("Model/model_plant.pt")
 	
 # 	image_bytes = file.read()
