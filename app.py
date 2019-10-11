@@ -12,7 +12,7 @@ from torch import nn
 
 
 
-app = Flask(__name__)
+app = Flask(__name__,static_url_path='/static')
 
 def predict_transfer(pil_image,model):
     # load the image and return the predicted breed
