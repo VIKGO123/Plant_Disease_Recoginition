@@ -1,4 +1,3 @@
-
 from flask import Flask,request,jsonify,render_template
 import os
 import torch
@@ -97,7 +96,7 @@ def upload_file():
     
     
 #         disease = predict_transfer(pil_image,model)
-        return jsonify ('This a disease picture of ')
+        return jsonify('This a disease picture of ')
     
     
 	
@@ -105,7 +104,6 @@ def upload_file():
 
 
 
-if __name__ == "__main__":
-	
-	app.run(debug=True,port=os.getenv('PORT',5000))
+if __name__ == '__main__':
+    app.run(debug=False,port=os.getenv('PORT',5000))
 
