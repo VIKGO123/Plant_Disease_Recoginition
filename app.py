@@ -80,7 +80,7 @@ def home():
 def render_about_page():
     return render_template('about.html')
 
-@app.route('/uploadajax',methods=['GET', 'POST'])
+@app.route('/uploadajax',methods=['POST'])
 def upload_file():
 	file = request.files['file']
     	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
