@@ -80,12 +80,13 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-@app.route("/upload-image", methods=["POST"])
-def upload_file():
-	file = request.files['images']
-    	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
-    	if file.filename.split('.')[1] not in image_extensions:
-		return jsonify('Please upload an appropriate image file')
+@app.route("/upload-image", methods=["GET","POST"])
+def upload_image():
+	if request.method == "POST":
+		file = request.files['images']
+    		image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
+    		if file.filename.split('.')[1] not in image_extensions:
+			return jsonify('Please upload an appropriate image file')
 # 	model = torch.load("Model/model_plant.pt")
 	
 # 	image_bytes = file.read()
@@ -96,7 +97,7 @@ def upload_file():
     
     
 #         disease = predict_transfer(pil_image,model)
-        return jsonify('This a disease picture of ')
+        	return jsonify('This a disease picture of ')
     
     
 	
