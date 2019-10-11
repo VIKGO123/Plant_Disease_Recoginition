@@ -80,9 +80,9 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-@app.route("/upload-image", methods=["POST"]
+@app.route("/upload-image", methods=["POST"])
 def upload_file():
-	file = request.files['file']
+	file = request.files['images']
     	image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
     	if file.filename.split('.')[1] not in image_extensions:
 		return jsonify('Please upload an appropriate image file')
