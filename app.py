@@ -69,7 +69,7 @@ def predict_transfer(pil_image,model):
     return class_name[class_idx]
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 @app.route('/')
 def home():
