@@ -82,11 +82,11 @@ def render_about_page():
 
 @app.route("/upload-image", methods=["GET","POST"])
 def upload_image():
-	if request.method == "POST":
+	 if request.method == "POST":
 
-        if request.files:
+        	if request.files:
 
-            image = request.files["image"]
+            		image = request.files["image"]
 # 	if request.method == "POST":
 # 		file = request.files['image']
 #     		image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
