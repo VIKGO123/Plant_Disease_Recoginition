@@ -102,7 +102,7 @@ def upload_image():
     
     
 #         		disease = predict_transfer(pil_image,model)
-       			return jsonify('This a disease picture of ')
+#        			return jsonify('This a disease picture of ')
     
     
 	
