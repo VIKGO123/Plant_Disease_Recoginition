@@ -89,20 +89,20 @@ def upload_image():
             		image = request.files["image"]
 # 	if request.method == "POST":
 # 		file = request.files['image']
-#     		image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
-#     		if file.filename.split('.')[1] not in image_extensions:
-# 			return jsonify('Please upload an appropriate image file')
-# 	model = torch.load("Model/model_plant.pt")
+    			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
+    			if file.filename.split('.')[1] not in image_extensions:
+				return jsonify('Please upload an appropriate image file')
+			model = torch.load("Model/model_plant.pt")
 	
-# 	image_bytes = file.read()
-#     	pil_image = Image.open(io.BytesIO(image_bytes))
+			image_bytes = file.read()
+    			pil_image = Image.open(io.BytesIO(image_bytes))
     
-#     	nparr = np.frombuffer(image_bytes, np.uint8)
-#     	img_np = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    			nparr = np.frombuffer(image_bytes, np.uint8)
+    			img_np = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
     
     
-#         disease = predict_transfer(pil_image,model)
-        #return jsonify('This a disease picture of ')
+        		disease = predict_transfer(pil_image,model)
+       			return jsonify('This a disease picture of {}'.format(disease))
     
     
 	
