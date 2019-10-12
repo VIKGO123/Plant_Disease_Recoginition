@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title>Dog Classifier</title>
+        <title>Hawk Eye</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
         </script>
@@ -13,12 +13,12 @@
             <a href="/">Home</a>
             <a href="/about">About</a>
         </nav>
-        <h1>Dog Breed Classifier</h1>
-        <p> Upload an Image and the result will be one of three things</p>
+        <h1>Plant Disease Recognition</h1>
+        <p> Upload an Image to identify the disease</p>
         <ol>
-            <li>If  Human Face is detected it will tell you the most resembling dog breed to that human face</li>
-            <li>If It is Dog then it will tell you the dog breed</li>
-            <li>If neither It will tell you to upload another Image</li>
+            <li>It will classify among 38 diseases</li>
+            <li>It is based on Deep Learning Model</li>
+            <li>Thank You for using our platform</li>
         </ol>
         <div class="container">
            <form action="/upload-image" method="POST" enctype="multipart/form-data">
