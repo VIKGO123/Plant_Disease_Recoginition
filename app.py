@@ -89,7 +89,7 @@ def upload_image():
             		image = request.files["image"]
 # 	if request.method == "POST":
 # 		file = request.files['image']
-#     			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
+    			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 #     			if image.filename.split('.')[1] not in image_extensions:
 # 				return jsonify('Please upload an appropriate image file')
 # 			model = torch.load("Model/model_plant.pt")
