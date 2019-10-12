@@ -25,13 +25,17 @@
 
         <div class="form-group">
           <label>Select image</label>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="image" id="image">
+<!--           <div class="custom-file">
+            <input type="file" class="custom-file-input" name="image" id="image"> -->
 <!--             <label class="custom-file-label" for="image">Select image...</label> -->
-          </div>
+<!--           </div> -->
+            <div class ="upload-button">
+                    <label id="labelId" for="file" >Choose a file</label>
+                    <img src="{{ url_for('static', filename='upload-white.png') }}"/>
+                </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Upload</button>
+        <button type="submit" class="btn btn-primary">Predict</button>
 
       </form>
             <div id="result">
