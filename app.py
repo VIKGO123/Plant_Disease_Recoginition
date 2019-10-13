@@ -84,6 +84,7 @@ def upload_file():
 	 if request.method == "POST":
 
         	if request.files:
+			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
 # 			image_bytes = image.read()
@@ -104,7 +105,7 @@ def upload_file():
     
     
 #         		disease = predict_transfer(pil_image,model)
-       	return jsonify('This a disease picture of ')
+       	
     
     
 	
