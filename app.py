@@ -79,13 +79,13 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-@app.route("/upload-image", methods=["GET","POST"])
-def upload_image():
-	 if request.method == "POST":
+@app.route('/uploadajax',methods=['POST'])
+def upload_file():
+# 	 if request.method == "POST":
 
-        	if request.files:
+#         	if request.files:
 
-            		image = request.files["image"]
+#             		image = request.files["image"]
 # 			image_bytes = image.read()
 # 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 			
