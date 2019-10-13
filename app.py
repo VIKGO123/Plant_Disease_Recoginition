@@ -79,8 +79,8 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-@app.route('/uploadajax',methods=['POST'])
-def upload_file():
+@app.route('/upload-image',methods=['POST'])
+def upload_image():
 	 if request.method == "POST":
 
         	if request.files:
