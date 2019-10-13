@@ -83,8 +83,11 @@ def render_about_page():
 def upload_image():
 
     if request.method == "POST":
-	if request.files:
-		image = request.files["image"]
+
+        if request.files:
+
+            image = request.files["image"]
+
 # 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
