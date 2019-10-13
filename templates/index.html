@@ -20,9 +20,16 @@
             <li>It is based on Deep Learning Model</li>
             <li>Thank You for using our platform</li>
         </ol>
-        <div class="container">
-             <form action="/upload-image" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
+       <div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Upload an image</h1>
+      <hr>
+
+      <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
           <label>Select image</label>
           <div class="custom-file">
             <input type="file" class="custom-file-input" name="image" id="image">
@@ -33,12 +40,9 @@
         <button type="submit" class="btn btn-primary">Upload</button>
 
       </form>
-        </div>
-            
-            <div id="result">
-                <h3>Result</h3>
-                <p>Result here</p>
-            </div>
-       
+
+    </div>
+  </div>
+</div>
     </body>
 </html>
