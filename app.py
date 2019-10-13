@@ -79,11 +79,11 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-# @app.route('/uploadajax',methods=['POST'])
-# def upload_file():
-# 	 if request.method == "POST":
+@app.route('/uploadajax',methods=['POST'])
+def upload_file():
+	 if request.method == "POST":
 
-#         	if request.files:
+        	if request.files:
 
 #             		image = request.files["image"]
 # 			image_bytes = image.read()
@@ -104,7 +104,7 @@ def render_about_page():
     
     
 #         		disease = predict_transfer(pil_image,model)
-#        			return jsonify('This a disease picture of ')
+       	return jsonify('This a disease picture of ')
     
     
 	
