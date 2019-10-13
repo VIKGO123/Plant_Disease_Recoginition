@@ -79,11 +79,14 @@ def home():
 def render_about_page():
 	return render_template('about.html')
 
-@app.route('/upload-image',methods=['GET','POST'])
+@app.route("/upload-image", methods=["GET", "POST"])
 def upload_image():
-	 if request.method == "POST":
 
-        	if request.files:
+    if request.method == "POST":
+
+        if request.files:
+
+            image = request.files["image"]
 # 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
