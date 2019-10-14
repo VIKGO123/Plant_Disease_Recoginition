@@ -98,8 +98,8 @@ def upload_file():
 			image = request.files["file"]
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
-			model = torch.load("Model/model_plant.pt")
-			disease = predict_transfer(image_bytes,model)
+# 			model = torch.load("Model/model_plant.pt")
+# 			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
