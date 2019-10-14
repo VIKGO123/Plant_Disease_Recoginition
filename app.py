@@ -11,17 +11,27 @@ import face_recognition
 from torch import nn
 
 
+def transform_image(image_bytes):
+    my_transforms = transforms.Compose([transforms.RandomRotation(45),
+        transforms.RandomResizedCrop(224),
+        transforms.RandomHorizontalFlip(),
+        transforms.ToTensor(),
+        transforms.Normalize([0.485, 0.456, 0.406], 
+                             [0.229, 0.224, 0.225])])
+    image = Image.open(io.BytesIO(image_bytes))
+    return my_transforms(image).unsqueeze(0)
 
-def predict_transfer(pil_image,model):
+
+def predict_transfer(image,model):
     # load the image and return the predicted breed
-    mean_train_set,std_train_set = [0.487,0.467,0.397],[0.235,0.23,0.23]
+#     mean_train_set,std_train_set = [0.487,0.467,0.397],[0.235,0.23,0.23]
     
-    image_transforms= transforms.Compose([transforms.Resize(256),
-                                          transforms.CenterCrop(224),
-                                          transforms.ToTensor(),
-                                          transforms.Normalize(mean_train_set,std_train_set)])
-    image_tensor = image_transforms(pil_image);
-    image_tensor.unsqueeze_(0)
+#     image_transforms= transforms.Compose([transforms.Resize(256),
+#                                           transforms.CenterCrop(224),
+#                                           transforms.ToTensor(),
+#                                           transforms.Normalize(mean_train_set,std_train_set)])
+    image_tensor = transform_image(image);
+#     image_tensor.unsqueeze_(0)
 #     if use_cuda:
 #         image_tensor = image_tensor.cuda()
     model.eval()
@@ -87,6 +97,7 @@ def upload_image():
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 			model = torch.load("Model/model_plant.pt")
+			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
