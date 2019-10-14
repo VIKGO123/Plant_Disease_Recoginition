@@ -86,6 +86,7 @@ def upload_image():
 			image = request.files["image"]
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
+			model = torch.load("Model/model_plant.pt")
 # 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
@@ -97,7 +98,7 @@ def upload_image():
     			
 #     			if image.filename.split('.')[1] not in image_extensions:
 # 				return jsonify('Please upload an appropriate image file')
-# 			model = torch.load("Model/model_plant.pt")
+
 	
 # 			image_bytes = image.read()
 #     			pil_image = Image.open(io.BytesIO(image_bytes))
