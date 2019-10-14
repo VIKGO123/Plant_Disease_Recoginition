@@ -87,7 +87,7 @@ def upload_image():
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 			model = torch.load("Model/model_plant.pt")
-# 			return jsonify('This a disease picture of ')
+			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
 			
