@@ -87,6 +87,7 @@ def upload_image():
         if request.files:
 
             image = request.files["image"]
+	
 	    image_bytes = image.read()
 # 			return jsonify('This a disease picture of ')
 
