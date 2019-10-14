@@ -82,13 +82,14 @@ def render_about_page():
 @app.route("/upload-image", methods=["GET", "POST"])
 def upload_image():
 
+
     if request.method == "POST":
 
         if request.files:
 
             image = request.files["image"]
 	
-	    image_bytes = image.read()
+# 	    image_bytes = image.read()
 # 			return jsonify('This a disease picture of ')
 
 #             		image = request.files["image"]
