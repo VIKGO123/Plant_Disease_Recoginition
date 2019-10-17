@@ -99,10 +99,10 @@ def upload_file():
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 			model = models.densenet121(pretrained=False)
-# 			model.classifier=nn.Sequential(nn.Linear(1024,500),
-#                                         nn.ReLU(),
-#                                         nn.Dropout(0.5),
-#                                        nn.Linear(500,38),nn.LogSoftmax(dim=1))
+			model.classifier=nn.Sequential(nn.Linear(1024,500),
+                                        nn.ReLU(),
+                                        nn.Dropout(0.5),
+                                       nn.Linear(500,38),nn.LogSoftmax(dim=1))
 # 			model.load_state_dict(torch.load("Model/model_plant.pt"))
 # 			model = torch.load("Model/model_plant.pt")
 # 			disease = predict_transfer(image_bytes,model)
