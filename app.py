@@ -105,7 +105,7 @@ def upload_file():
 #                                        nn.Linear(500,38),nn.LogSoftmax(dim=1))
 # 			model.load_state_dict(torch.load("Model/model_plant.pt"))
 			model = torch.load("Model/model_plant.pt")
-			disease = predict_transfer(image_bytes,model)
+# 			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ')
 # 			model = torch.load("Model/model_plant.pt")
 		
