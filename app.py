@@ -35,7 +35,7 @@ def predict_transfer(image,model):
 #     if use_cuda:
 #         image_tensor = image_tensor.cuda()
     model.eval()
-#     output = model(image_tensor)
+    output = model(image_tensor)
 #     _,class_idx=torch.max(output,dim=1)
     class_name={0: 'Apple___Apple_scab',
  1: 'Apple___Black_rot',
