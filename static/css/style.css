@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     background-image: url("templates/image/farm.jpg");
-    background-color: #45cc8f;
+/*     background-color: #45cc8f; */
 }
 
 input[type="submit"] {
