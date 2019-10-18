@@ -96,7 +96,7 @@ def upload_file():
 # 			model.load_state_dict(torch.load("Model/model_plant.pt"))
 			device = torch.device('cpu')
 			model = torch.load("Model/model_plant.pt",map_location=device)
-			disease = predict_transfer(image_bytes,model)
+# 			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ')
 # 			model = torch.load("Model/model_plant.pt")
 		
