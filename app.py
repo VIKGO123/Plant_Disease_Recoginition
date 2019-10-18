@@ -36,7 +36,7 @@ def predict_transfer(image,model):
 #         image_tensor = image_tensor.cuda()
     model.eval()
     output = model(image_tensor)
-#    _,class_idx=torch.max(output,dim=1)
+#     _,class_idx=torch.max(output,dim=1)
     class_name={0: 'Apple___Apple_scab',
  1: 'Apple___Black_rot',
  2: 'Apple___Cedar_apple_rust',
@@ -106,7 +106,7 @@ def upload_file():
 # 			model.load_state_dict(torch.load("Model/model_plant.pt"))
 			device = torch.device('cpu')
 			model = torch.load("Model/model_plant.pt",map_location=device)
- 			disease = predict_transfer(image_bytes,model)
+			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ')
 # 			model = torch.load("Model/model_plant.pt")
 		
