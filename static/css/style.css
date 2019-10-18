@@ -4,7 +4,9 @@ html {
 
 body {
 
-    background-image: url("https://github.com/VIKGO123/Plant-Disease-Recoginition/tree/master/templates/image/farm.jpg"); 
+    background-image: url("https://github.com/VIKGO123/Plant-Disease-Recoginition/tree/master/templates/image/farm.jpg");
+    background-position: 50% 50%;
+    background-repeat: repeat;
 
 }
 
