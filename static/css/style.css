@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    background-image: url("templates/image/farm.jpg");
     background-color: #45cc8f;
 }
 
