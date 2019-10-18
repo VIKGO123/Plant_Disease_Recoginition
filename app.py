@@ -30,7 +30,7 @@ def predict_transfer(image,model):
 #                                           transforms.CenterCrop(224),
 #                                           transforms.ToTensor(),
 #                                           transforms.Normalize(mean_train_set,std_train_set)])
-    image_tensor = transform_image(image);
+    image_tensor = transform_image(image)
 #     image_tensor.unsqueeze_(0)
 #     if use_cuda:
 #         image_tensor = image_tensor.cuda()
