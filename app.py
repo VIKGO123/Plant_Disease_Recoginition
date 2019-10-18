@@ -34,7 +34,7 @@ def predict_transfer(image,model):
 #     image_tensor.unsqueeze_(0)
 #     if use_cuda:
 #         image_tensor = image_tensor.cuda()
-#     model.eval()
+    model.eval()
 #     output = model(image_tensor)
 #     _,class_idx=torch.max(output,dim=1)
     class_name={0: 'Apple___Apple_scab',
