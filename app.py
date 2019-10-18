@@ -23,21 +23,11 @@ def transform_image(image_bytes):
 
 
 def predict_transfer(image,model):
-    # load the image and return the predicted breed
-#     mean_train_set,std_train_set = [0.487,0.467,0.397],[0.235,0.23,0.23]
-    
-#     image_transforms= transforms.Compose([transforms.Resize(256),
-#                                           transforms.CenterCrop(224),
-#                                           transforms.ToTensor(),
-#                                           transforms.Normalize(mean_train_set,std_train_set)])
-    image_tensor = transform_image(image)
-#     image_tensor.unsqueeze_(0)
-#     if use_cuda:
-#         image_tensor = image_tensor.cuda()
-    model.eval()
-    output = model(image_tensor)
-#     _,class_idx=torch.max(output,dim=1)
-    class_name={0: 'Apple___Apple_scab',
+	image_tensor = transform_image(image)
+	model.eval()
+	output = model(image_tensor)
+	_,class_idx=torch.max(output,dim=1)
+	class_name={0: 'Apple___Apple_scab',
  1: 'Apple___Black_rot',
  2: 'Apple___Cedar_apple_rust',
  3: 'Apple___healthy',
