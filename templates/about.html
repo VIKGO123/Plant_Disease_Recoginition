@@ -7,6 +7,157 @@
         </script>
 
         <script src="{{ url_for('static', filename='js/javascript.js') }}"></script>
+        <style>
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.5;
+    color: #323232;
+    font-size: 15px;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+}
+.heading-title {
+    margin-bottom: 100px;
+}
+.text-center {
+    text-align: center;
+}
+
+
+.heading-title h3 {
+    margin-bottom: 0;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.p-top-30 {
+    padding-top: 30px;
+}
+.half-txt {
+    width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    line-height: 25px;
+    color: #7e7e7e;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.team-member, .team-member .team-img {
+    position: relative;
+	
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.90);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.team-member:hover .team-hover .desk {
+    top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+    color: #222;
+}
+.team-member .s-link a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 16px;
+}
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #a5a5a5;
+    letter-spacing: 1px;
+}
+
+
+</style>
     </head>
     <body>
         <nav class="nav-site">
@@ -15,14 +166,105 @@
         </nav>
             
         
-        <h1>About us</h1>
         
-        <h3> The Team</h3>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/vikgo-27/">Vikash Pathak</a></li>
-            <li><a href="https://www.linkedin.com/in/yuvraj-singh-84b3114a/">Yuvraj Singh</a></li>
-            <li><a href="https://www.linkedin.com/in/vishal-singh-8a5ab6167/">Vishal Singh</a></li>
-            <li><a href="https://www.linkedin.com/in/vipin-mittal-14a184137/">Vipin</a></li>
-        </ul>
+<div class="container">
+                    <div class="row">
+                        <div class="heading-title text-center">
+                            <h3 class="text-uppercase">Our Team </h3>
+                            <p class="p-top-30 half-txt">This is our Hawk Eye Capstone Team</p>
+                        </div>
+
+                        <div class="col">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/22365720_1759078930832960_4527648366542645161_n.jpg?_nc_cat=111&_nc_oc=AQnoLNWP20WG6wgDnSZGonL2a74DGIVYapfIw-7sc4-pJuWBiTYRpKVWTLz5G5Au8gw&_nc_ht=scontent.fdel29-1.fna&oh=b65e96872f2c657a0f65ea03b50ddc99&oe=5E20EBD3" alt="team member" class="img-responsive" style="width:500px;height:600px;">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Hi There !</h4>
+                                        <p>I love to introduce myself as a Deep Learning Developer.</p>
+										
+										
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="https://www.linkedin.com/in/vikgo-27/">Linkedin</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Vikash Pathak</h5>
+                                <span>Team Leader</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://media.licdn.com/dms/image/C5603AQEOP6mAdtg5UQ/profile-displayphoto-shrink_800_800/0?e=1576713600&v=beta&t=8hpNRh0unUHx1oAJznittl7KYsukJybHmQks81gVqYk" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>Hi There!</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="https://www.linkedin.com/in/yuvraj-singh-84b3114a/">linkedin</a>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Yuvraj Singh</h5>
+                                <span>Team Member</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://scontent.fdel29-1.fna.fbcdn.net/v/t1.0-9/13882401_165318450559800_6988416604007431894_n.jpg?_nc_cat=103&_nc_oc=AQnwqsNfg93TN3MT8scZJmJb8kIgMNttrbRHlap2nhB9jSbXdNQ9kHmXC5LsDqO7aAU&_nc_ht=scontent.fdel29-1.fna&oh=cb691519c0aa82e05476180e70017c24&oe=5E24997F" alt="team member" class="img-responsive">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>I love to design</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="https://www.linkedin.com/in/vipin-mittal-14a184137/">linkedin</a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Vipin</h5>
+                                <span>Team Member</span>
+                            </div>
+                        </div>
+						
+						<div class="col">
+                            <div class="team-member">
+                                <div class="team-img">
+                                    <img src="https://media.licdn.com/dms/image/C5103AQHgvA89C0ncMA/profile-displayphoto-shrink_800_800/0?e=1576713600&v=beta&t=N2UNohSqhb0xEFlLWQrH4xzO8e-PTYUPn5BRklUGHdI" alt="team member" class="img-responsive" style="width:500px;height:600px;">
+                                </div>
+                                <div class="team-hover">
+                                    <div class="desk">
+                                        <h4>I love to design</h4>
+                                        <p>I love to introduce myself as a hardcore Web Designer.</p>
+                                    </div>
+                                    <div class="s-link">
+                                        <a href="https://www.linkedin.com/in/vishal-singh-8a5ab6167/">linkedin</a>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="team-title">
+                                <h5>Vishal Singh</h5>
+                                <span>Team Member</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+				
     </body>
 </html>
