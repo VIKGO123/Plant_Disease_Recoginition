@@ -116,7 +116,7 @@ def upload_file():
 			
 # 			model = torch.load("Model/model_plant.pt",map_location=device)
 			disease = predict_transfer(image_bytes,model)
-			return jsonify('This a disease picture of ',disease)
+			return jsonify('This a disease picture of:{}'.format(disease))
 # 			model = torch.load("Model/model_plant.pt")
 		
 
