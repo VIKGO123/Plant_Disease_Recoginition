@@ -10,7 +10,7 @@ import face_recognition
 import cv2
 import face_recognition
 from torch import nn
-
+device = torch.device('cpu')
 
 def transform_image(image_bytes):
     my_transforms = transforms.Compose([transforms.RandomRotation(45),
