@@ -37,7 +37,7 @@ def predict_transfer(image,model):
 #         image_tensor = image_tensor.cuda()
     model.eval()
     output = model(image_tensor)
-    _,class_idx=torch.max(output,dim=1)
+    _,class_idx=torch.max(output, 1)
     class_name={0: 'Apple___Apple_scab',
  1: 'Apple___Black_rot',
  2: 'Apple___Cedar_apple_rust',
@@ -76,7 +76,7 @@ def predict_transfer(image,model):
  35: 'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
  36: 'Tomato___Tomato_mosaic_virus',
  37: 'Tomato___healthy'}
-    return class_name[class_idx]
+    return class_idx
 
 
 app = Flask(__name__, static_url_path='/static')
