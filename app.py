@@ -76,7 +76,7 @@ def predict_transfer(image,model):
  35: 'Tomato___Tomato_Yellow_Leaf_Curl_Virus',
  36: 'Tomato___Tomato_mosaic_virus',
  37: 'Tomato___healthy'}
-    return class_idx
+    return class_name[1]
 
 
 app = Flask(__name__, static_url_path='/static')
