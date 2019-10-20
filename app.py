@@ -1,4 +1,5 @@
 from flask import Flask,request,jsonify,render_template
+from collections import OrderedDict
 import os
 import torch
 from torchvision import models,transforms
@@ -99,14 +100,18 @@ def upload_file():
 			image_bytes = image.read()
 			image_extensions=['ras', 'xwd', 'bmp', 'jpe', 'jpg', 'jpeg', 'xpm', 'ief', 'pbm', 'tif', 'gif', 'ppm', 'xbm', 'tiff', 'rgb', 'pgm', 'png', 'pnm']
 			device = torch.device('cpu')
-# 			model = models.densenet121(pretrained=False)
-# 			model.classifier=nn.Sequential(nn.Linear(1024,500),
-#                                         nn.ReLU(),
-#                                         nn.Dropout(0.5),
-#                                        nn.Linear(500,38),nn.LogSoftmax(dim=1))
-# 			model.load_state_dict(torch.load("Model/model_plant.pt",map_location=device))
+			model = models.densenet121(pretrained=True)
+			classifier = nn.Sequential(OrderedDict([
+                          ('fc1', nn.Linear(1024, 500)),
+                          ('relu', nn.ReLU()),
+                          ('drop1',nn.Dropout(p=0.5)),
+                          ('fc2', nn.Linear(500, 38)),
+                          ('output', nn.LogSoftmax(dim=1))
+                          ]))
+			model.classifier = classifier
+			model.load_state_dict(torch.load("Model/model_plant_modified.pt",map_location=device))
 			
-			model = torch.load("Model/model_plant.pt",map_location=device)
+# 			model = torch.load("Model/model_plant.pt",map_location=device)
 			disease = predict_transfer(image_bytes,model)
 			return jsonify('This a disease picture of ',disease)
 # 			model = torch.load("Model/model_plant.pt")
