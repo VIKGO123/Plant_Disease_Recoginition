@@ -90,7 +90,7 @@ ol li {
     height: 16px;
 }
 
-.upload-button1 {
+.upload-button {
     margin-top:10px;
     color: #fff;
     width: 50%;
@@ -102,11 +102,11 @@ ol li {
     border-radius: 5px;
     text-align: center;
 }
-.upload-button1 label {
+.upload-button label {
     cursor: pointer;
     margin-bottom: 10px;
 }
-.upload-button1 img {
+.upload-button img {
     width: 16px;
     height: 16px;
 }
