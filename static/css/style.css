@@ -89,6 +89,29 @@ ol li {
     width: 16px;
     height: 16px;
 }
+
+.upload-button1 {
+    margin-top:10px;
+    color: #fff;
+    width: 50%;
+    background-color: #18724e;
+    display: inline-block;
+    cursor: pointer;
+    padding: 3px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+}
+.upload-button1 label {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.upload-button1 img {
+    width: 16px;
+    height: 16px;
+}
+
+
 #result h3 {
     color: #fff;
 }
