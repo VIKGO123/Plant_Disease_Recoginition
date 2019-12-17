@@ -10,7 +10,7 @@ import face_recognition
 import cv2
 import face_recognition
 from torch import nn
-import six.moves.urllib as urllib
+# import six.moves.urllib as urllib
 import sys
 
 import tensorflow as tf
@@ -18,12 +18,12 @@ import tensorflow as tf
 
 from collections import defaultdict
 from io import StringIO
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 
 from PIL import Image
 
-from object_detection.utils import label_map_util
-from object_detection.utils import visualization_utils as vis_util
+# from object_detection.utils import label_map_util
+# from object_detection.utils import visualization_utils as vis_util
 
 
 device = torch.device('cpu')
