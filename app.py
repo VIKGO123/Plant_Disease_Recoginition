@@ -13,7 +13,7 @@ from torch import nn
 # import six.moves.urllib as urllib
 import sys
 
-import tensorflow as tf
+# import tensorflow as tf
 
 
 from collections import defaultdict
